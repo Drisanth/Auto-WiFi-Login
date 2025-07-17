@@ -1,10 +1,27 @@
 {
   "manifest_version": 3,
   "name": "Auto Login Extension",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Automatically logs into a website on page load.",
-  "permissions": ["scripting"],
+  "permissions": ["storage", "scripting", "tabs"],
   "host_permissions": ["http://phc.prontonetworks.com/cgi-bin/authlogin*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Set WiFi Credentials",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["http://phc.prontonetworks.com/cgi-bin/authlogin*"],
