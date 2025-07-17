@@ -9,7 +9,7 @@ document.getElementById("save").addEventListener("click", () => {
 
     setTimeout(() => {
       status.style.display = "none";
-    }, 2000);
+    }, 2500);
   });
 });
 

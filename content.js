@@ -32,7 +32,7 @@
   window.addEventListener("load", () => {
     chrome.storage.local.get(["username", "password"], (data) => {
       if (data.username && data.password) {
-        setTimeout(() => tryLogin(data.username, data.password), 3000);
+        setTimeout(() => tryLogin(data.username, data.password), 1500);
       } else {
         console.warn("No credentials saved.");
       }
