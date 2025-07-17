@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Login Extension",
+  "version": "1.0",
+  "description": "Automatically logs into a website on page load.",
+  "permissions": ["scripting"],
+  "host_permissions": ["http://phc.prontonetworks.com/cgi-bin/authlogin*"],
+  "content_scripts": [
+    {
+      "matches": ["http://phc.prontonetworks.com/cgi-bin/authlogin*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
